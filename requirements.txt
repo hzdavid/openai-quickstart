@@ -1,0 +1,9 @@
+scipy
+tenacity
+tiktoken
+termcolor
+openai==0.28
+requests
+langchain
+chromadb
+unstructured
