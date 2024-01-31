@@ -19,6 +19,7 @@ def main1():
 def main2():
     chat_model = ChatOpenAI(model="gpt-4-1106-preview", temperature=0)
     # 加载 LangChain 内置的 Tools
+    #这里的serpapi和llm-math是LangChain库提供的内置工具，每个工具都有特定的功能：
     tools = load_tools(["serpapi", "llm-math"], llm=chat_model)
     agent = initialize_agent(tools, chat_model, agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
     agent.run("谁是莱昂纳多·迪卡普里奥的女朋友？她现在年龄的0.43次方是多少?")
